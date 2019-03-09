@@ -87,11 +87,12 @@ body {
     text-transform: uppercase;
     font-size: 52px;
     font-weight: 800;
+    margin: 0;
 }
 
 .header-buttons {
     margin: 45px auto 0;
-    display:table;
+    display: table;
 }
 
 .button {
@@ -102,11 +103,37 @@ body {
     text-decoration: none;
 }
 
+.header-button {
+    display: table;
+    float: left;
+}
+
 .header-button.left-button {
     background-color: #315B9D;
     color: #fff;
 }
 
 .header-button.right-button {
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    margin-left: 30px;
     color: #fff;
+    position: relative;
+}
+
+.header-button.right-button::before, .header-button.right-button::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 160%;
+    background-color: #fff;
+    top: -30%;
+}
+
+.header-button.right-button::before {
+    left: 10%;
+}
+
+.header-button.right-button::after {
+    right: 10%;
 }
